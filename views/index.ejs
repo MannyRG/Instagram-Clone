@@ -1,0 +1,72 @@
+
+    
+<%- include('./partials/header.ejs') %>
+    
+    
+
+    <h1> Index Profile</h1>
+    <div class="profile-container">
+            <div class="profileImg">
+                <div class='userImg'>
+                     <img class="pfImg" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/207.png">
+                 </div>
+            </div >
+
+            <div class="profileSection">
+                <div >
+                COL 2 Row 1
+                |
+                |
+                            
+                </div>
+                <div >
+                COL 2 Row 2
+                |
+                |
+                |
+        
+                </div>
+            </div>
+         <div class="profileDescription">
+                COL 2 Row 3
+                |
+                |
+                |
+                |
+        
+         </div>
+    </div>
+    
+<div class="container">
+    <nav class="row">
+        <div class="col-4"> |||1||| </div>
+        <div class="col-4" > |||2||| </div>
+        <div class="col-4"> |||3||| </div>
+    </nav>
+
+  
+        
+        <div class="row">
+        <% for(let i = 0; i < userProfile[0].posts.length; i++ ){ %>
+            <div class="col-4 px-2 py-2">
+                <div>
+                <a href="/bitgram/post/<%= i %>" > 
+                    <img  class="postImg"  src="<%=userProfile[0].posts[i]%>" > 
+                </a>
+            </div>
+            </div> 
+        <%}%>
+        <div class="col-4 px-2 py-2"><a href="/bitgram/new/"> + </a> </div>
+    </div>
+
+    
+    
+</div>
+
+    <%- include('./partials/footer.ejs') %>
+
+
+
+
+
+

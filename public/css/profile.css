@@ -1,0 +1,64 @@
+
+*{
+
+    border: 1px solid  black;
+   
+}
+
+body {
+    background-color: lightblue
+}
+
+.profile-container{
+    display: grid;
+    grid-template-columns: 30%  auto;
+    grid-auto-rows:  auto;
+    /* grid-gap: 1em; */
+    height: 12em;
+    grid-template-areas: 
+    "img section"
+    "img description"
+    ;
+
+
+}
+
+
+
+.profileImg{
+    grid-area: img;
+   
+}
+.userImg{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: azure;
+
+}
+.pfImg{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+.profileSection{
+    grid-area: section;
+}
+
+
+.profileDescription {
+    grid-area: description;
+}
+
+
+
+
+
+.postImg{
+    height: 100%;
+    width : 100%;
+}
+
+
