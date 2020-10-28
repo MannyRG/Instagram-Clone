@@ -1,13 +1,14 @@
 
-*{
+/* *{
 
     border: 1px solid  black;
    
-}
+} */
 
 body {
-    background-color: lightblue
+    background-color: white;
 }
+
 
 .profile-container{
     display: grid;
@@ -22,8 +23,6 @@ body {
 
 
 }
-
-
 
 .profileImg{
     grid-area: img;

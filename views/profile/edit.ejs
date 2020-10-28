@@ -1,0 +1,25 @@
+
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
+
+<h1>Edit Page</h1>
+
+<button><a href="/profile"  > Return </a></button>
+
+<div class="postContainer">
+    <div class="row justify-content-center  h-80 sec" >
+        <div class="col-7"> 
+            <img src="<%=post.img %> " alt="" srcset=""> 
+            <form action="/profile/post/<%=post.id%>?_method=PUT" method="POST">
+            <label > Caption:</label>
+                <input type="text" value="<%=post.caption%>" name="caption"> 
+                <input type="submit" value="Update">
+            </form> 
+        </div> 
+        </div>
+    </div>
+</div>
+
+
+<%- include('../partials/footer.ejs') %>
+

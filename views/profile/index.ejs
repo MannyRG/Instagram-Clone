@@ -1,10 +1,11 @@
 
     
-<%- include('./partials/header.ejs') %>
+<%- include('../partials/header.ejs') %>
+<%- include('../partials/nav.ejs') %>
     
     
 
-    <h1> Index Profile</h1>
+    <h1> </h1>
     <div class="profile-container">
             <div class="profileImg">
                 <div class='userImg'>
@@ -47,24 +48,24 @@
   
         
         <div class="row">
-        <% for(let i = 0; i < profile.posts.length; i++ ){ %>
+        <% for(let i = 0; i < profile.length; i++ ){ %>
             <div class="col-4 px-2 py-2">
                 <div>
                     
-                <a href="/post/<%= profile.id %>/<%=i%>" > 
-                    <img  class="postImg"  src="<%=profile.posts[i].img[0]%>" > 
+                <a href="/profile/<%= profile[i].id%>" > 
+                    <img  class="postImg"  src=" <%= profile[i].img[0] %> "> 
                 </a>
             </div>
             </div> 
         <%}%>
-        <div class="col-4 px-2 py-2"><a href="/profile/<%= profile.id %>/newPost"> ||||||| + |||||||| </a> </div>
+        <div class="col-4 px-2 py-2"><a href="/profile/newPost"> ||||||| + |||||||| </a> </div>
     </div>
 
     
     
 </div>
 
-    <%- include('./partials/footer.ejs') %>
+    <%- include('../partials/footer.ejs') %>
 
 
 

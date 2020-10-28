@@ -8,27 +8,35 @@
 
 
 
-    <div class="col-5">
-        <div>
-            <div> <h2>BitGram</h2> </div>
-            <form action="/bitgram/accounts" method="POST">
-                <label>
-                    <span>Username</span>
+    <div class="col-5 leftFeild">
+        <div class="row loginBox">
+            <div class="col-12 justify-content-center"> <h2 style="text-align: center;">BitGram</h2> </div>
+            <div class="loginFeild" >
+            <form action="/sessions" method="Post"  >
+                <label >
+                    <span>Username:</span>
                     <input type="text" name="username" >
                 </label>
                 <label>
-                    <span>Password</span>
-                    <input type="text" name="password">
+                    <span>Password:</span>
+                    <input type="password" name="password">
                 </label>
-                <input type="submit" value="Log in" >
+                <div class=" logBttnBox">
+                    <input type="submit" value="Log in" class="loginBttn">
+                 </div>
             </form>
+         </div>
         </div>
 
-        <div>
-            <div>
-                <p>Don't have an account?
-                    <a href="/new-accounts/signup"><span> Sign Up</span></a>
-                </p>
+
+
+        <div class="signupBox ">
+            <div class="signFeild">
+                <div>
+                    <p>Don't have an account?
+                        <a href="/accounts/signup"><span> Sign Up</span></a>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

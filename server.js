@@ -7,14 +7,10 @@ const app = express()
 const port = process.env.PORT 
 const mongodbURI = process.env.MONGODBURI
 
-const bitUsers= require('./models/users.js')
+// const bitUsers= require('./models/users.js')
 const methodOverride = require('method-override');
 const session = require('express-session')
-app.use(session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false,
-}))
+
 
 app.use(methodOverride('_method'));
 app.use(express.json())
@@ -22,6 +18,12 @@ app.use(express.urlencoded({extends: true}))
 
 
 app.use(express.static('public'))
+
+app.use(session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+}))
 
 /////// Mongoose Connection
 const mongoose = require('mongoose');
@@ -42,9 +44,13 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 
 
 
+const sessionsController = require('./controllers/sessions.js');
+app.use('/sessions', sessionsController)
+const profilesController = require('./controllers/profiles.js');
+app.use('/profile', profilesController)
+const usersController = require('./controllers/users.js');
+app.use('/accounts', usersController)
 
-const profileController = require('./controllers/profiles.js');
-app.use('/bitgram', profileController)
 
 
 
@@ -57,35 +63,35 @@ app.get('/',(req,res)=>{
     })
 } )
 
-/////// ------ New---- User Sign up 
-app.get('/new-accounts/signup',(req,res)=>{
-    res.render('signup.ejs',{
-    })
-})
+// /////// ------ New---- User Sign up 
+// app.get('/new-accounts/signup',(req,res)=>{
+//     res.render('users/signup.ejs',{
+//     })
+// })
 
-////// ---- New Account----
-app.post('/new-accounts',(req,res)=>{
-    bitUsers.create(req.body,(error, createUser)=>{
-        console.log(createUser)
-        res.redirect('/bitgram/accounts/login')
-    })
-})
+// ////// ---- New Account----
+// app.post('/new-accounts',(req,res)=>{
+//     bitUsers.create(req.body,(error, createUser)=>{
+//         console.log(createUser)
+//         res.redirect('/bitgram/accounts/login')
+//     })
+// })
 
-/////// ---- New user Login route----
-app.get('/accounts/login',(req,res)=>{
-    res.render('login.ejs',{
-    })
-})
+// /////// ---- New user Login route----
+// app.get('/accounts/login',(req,res)=>{
+//     res.render('users/login.ejs',{
+//     })
+// })
 
 
-///-----Login Post-----
-app.post('/accounts/', (req,res)=>{
-    const username = req.body.username
-    const password = req.body.password
-    bitUsers.findOne({username:req.body.username}, (error,foundUser)=>{
-        res.redirect(`/bitgram/profile/${foundUser.username}`)
-    })
-})
+// ///-----Login Post-----
+// app.post('/accounts/', (req,res)=>{
+//     const username = req.body.username
+//     const password = req.body.password
+//     bitUsers.findOne({username:req.body.username}, (error,foundUser)=>{
+//         res.redirect(`/profile/`)
+//     })
+// })
 
 
 

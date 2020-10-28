@@ -15,5 +15,6 @@ npm i dotenv
 
 npm i express-session
 
+npm i bcrypt  
 
 

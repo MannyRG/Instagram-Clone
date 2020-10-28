@@ -4,17 +4,16 @@ const Schema = mongoose.Schema;
 
 
 
-
-const bitPost ={ 
-    date: Date(),
-    img:[],
-    caption: "",
-    comments:[],
-    likes: 0,
-    shares: 0,
-}
+const postSchema = new Schema({ 
+    img:{type: Array, default:[]},
+    caption:{type: String, default: String },
+    comments:{type: Array, default:[]},
+    likes: {type: Number, default: 0},
+    shares: {type: Number, default: 0 },
+})
 
 
+const bitPost = mongoose.model('bitPost ', postSchema);
 
 module.exports = bitPost;
 
