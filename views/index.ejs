@@ -47,16 +47,17 @@
   
         
         <div class="row">
-        <% for(let i = 0; i < userProfile[0].posts.length; i++ ){ %>
+        <% for(let i = 0; i < profile.posts.length; i++ ){ %>
             <div class="col-4 px-2 py-2">
                 <div>
-                <a href="/bitgram/post/<%= i %>" > 
-                    <img  class="postImg"  src="<%=userProfile[0].posts[i]%>" > 
+                    
+                <a href="/post/<%= profile.id %>/<%=i%>" > 
+                    <img  class="postImg"  src="<%=profile.posts[i].img[0]%>" > 
                 </a>
             </div>
             </div> 
         <%}%>
-        <div class="col-4 px-2 py-2"><a href="/bitgram/new/"> + </a> </div>
+        <div class="col-4 px-2 py-2"><a href="/profile/<%= profile.id %>/newPost"> ||||||| + |||||||| </a> </div>
     </div>
 
     

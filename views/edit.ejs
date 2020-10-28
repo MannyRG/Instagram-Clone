@@ -4,8 +4,23 @@
 
 <h1>Edit Page</h1>
 
-<button><a href="/bitgram/profile"  > Return </a></button>
+<button><a href="/bitgram/profile/<%=username%>"  > Return </a></button>
 
+<div class="postContainer">
+    <div class="row justify-content-center  h-80 sec" >
+        <div class="col-7"> 
+            <form action="/bitgram/update/<%= profileId %>/<%= date %>?_method=PUT" method="POST">
+            <img src="<%=post.img %> " alt="" srcset=""> 
+            <div> 
+            <label > Caption:
+                <input type="text" value="<%=post.caption%>" name="caption"> 
+            </label>
+            </div>
+                <input type="submit" value="Update">
+            </form> </div> 
+        </div>
+    </div>
+    </div>
 
 
 <%- include('./partials/footer.ejs') %>

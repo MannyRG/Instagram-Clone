@@ -1,0 +1,39 @@
+<%- include('./partials/header.ejs') %>
+
+
+<div class="row justify-content-center" style="height: 100vh;">
+    <div class="col-6">
+        
+    </div>
+
+
+
+    <div class="col-5">
+        <div>
+            <div> <h2>BitGram</h2> </div>
+            <form action="/bitgram/accounts" method="POST">
+                <label>
+                    <span>Username</span>
+                    <input type="text" name="username" >
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="text" name="password">
+                </label>
+                <input type="submit" value="Log in" >
+            </form>
+        </div>
+
+        <div>
+            <div>
+                <p>Don't have an account?
+                    <a href="/new-accounts/signup"><span> Sign Up</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<%- include('./partials/footer.ejs') %>
+

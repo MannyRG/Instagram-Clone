@@ -11,15 +11,17 @@
 <div class="postContainer">
 <div class="row justify-content-center  h-80 sec" >
     <div class="col-7"> 
-        <img src="<%= post%> " alt="" srcset=""> 
-        <div> <form action="/bitgram/     :id   ?method=DELETE" method="POST">
+        <img src="<%= post[postId].img[0]%> " alt="" srcset=""> 
+        <div> <form action="/bitgram/post/<%=profileId%>/<%=postId %>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE">
         </form> </div> 
-        <div><button value="Edit"><a href="/bitgram/    1      /edit"> Edit </a></button></div>      
+        <div><button value="Edit"><a href="/post/<%=profileId%>/edit/<%= postId %>"> Edit </a></button></div>      
     </div>
     <div class="col-4">  hey</div>
 </div>
 </div>
+
+
 
 <%- include('./partials/footer.ejs') %>
 

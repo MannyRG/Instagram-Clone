@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "14.11.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/MannyRG/Instagram-Clone.git"
@@ -18,9 +21,11 @@
   },
   "homepage": "https://github.com/MannyRG/Instagram-Clone#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.10.9"
   },
