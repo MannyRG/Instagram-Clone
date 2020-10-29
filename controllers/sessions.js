@@ -17,6 +17,7 @@ sessions.post('/', (req,res)=>{
 
 
 bitUser.findOne({username: req.body.username}, (err,foundUser)=>{
+    console.log(foundUser)
     // if(err){
 
     //     console.log(err)
@@ -35,7 +36,7 @@ bitUser.findOne({username: req.body.username}, (err,foundUser)=>{
     //     }
 
     // }
-   res.redirect(`/profile`)
+   res.redirect(`/profile/`)
 })
 
 })

@@ -3,6 +3,9 @@ const express = require('express')
 const router = express.Router()
 // const bitUsers= require('../models/users.js')
 const bitPost= require('../models/posts.js')
+const bitUsers= require('../models/users.js')
+
+
 
 
 
@@ -11,10 +14,16 @@ const bitPost= require('../models/posts.js')
 router.get('/', (req,res)=>{
 
     bitPost.find({}, (error,foundProfile)=>{
-         res.render(`profile/index.ejs`,{
-             profile: foundProfile,
-             currentUser: req.session.currentUser,
-         })
+        bitUsers.find({username:req.params.user},(error,foundUser)=>{ 
+
+            res.render(`profile/index.ejs`,{
+                profile: foundProfile,
+                user: foundUser,
+                currentUser: req.session.currentUser,
+            })
+
+        })
+
      })
 })
 
@@ -59,6 +68,7 @@ router.post('/',(req,res)=>{
 router.get('/:id/', (req,res)=>{
 
     bitPost.findById(req.params.id,(error, foundPost)=>{
+        
         res.render('profile/show.ejs',{
             post: foundPost,
             currentUser: req.session.currentUser

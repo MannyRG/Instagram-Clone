@@ -5,6 +5,7 @@ const users = express.Router()
 const bitUser = require('../models/users.js')
 
 
+
 users.get('/signup',(req, res)=>{
 
     res.render('users/signup.ejs',
@@ -27,6 +28,9 @@ bitUser.create(req.body,(err, createUser)=>{
 })
 
 })
+
+
+
 
 
 ////------Edit Route-----//
