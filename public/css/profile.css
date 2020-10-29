@@ -151,8 +151,7 @@ body {
         height: 4rem;
         width: 4rem;
         border-radius: 50%;
-        background-color: azure;
-    
+        background-color: lightblue;
     }
 
     .profinner-container{
@@ -164,7 +163,7 @@ body {
         "name setting"
         "edit edit"
         ;
-        border: 1px solid  black;
+        /* border: 1px solid  black; */
     
     
     }
