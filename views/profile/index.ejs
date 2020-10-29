@@ -7,47 +7,55 @@
 
     <h1> </h1>
     <div class="profile-container">
-            <div class="profileImg">
+            <div class="profileImg rounded mx-auto d-block">
                 <div class='userImg'>
                      <img class="pfImg" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/207.png">
                  </div>
             </div >
 
-            <div class="profileSection">
-                <div >
-                COL 2 Row 1
-                |
-                |
-                            
+            <div class="profileSection ">
+                <div class="profinner-container" style="margin-right: 1em;" >
+                    <div class="userName"style="margin-right: 1em;">
+                        <h5> 
+                            <!-- /<% currentUser%>   -->
+                            Currrent Name
+                        </h5>
+                    </div>
+                    <div class="editBttn" style="margin-right: 1em;" ><a class ="act" href="#"> Edit Profile</a></div>
+                    <div class="settingBttn"  style="margin-right: 1em;"><a href="#"> 
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-gear-wide" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8.932.727c-.243-.97-1.62-.97-1.864 0l-.071.286a.96.96 0 0 1-1.622.434l-.205-.211c-.695-.719-1.888-.03-1.613.931l.08.284a.96.96 0 0 1-1.186 1.187l-.284-.081c-.96-.275-1.65.918-.931 1.613l.211.205a.96.96 0 0 1-.434 1.622l-.286.071c-.97.243-.97 1.62 0 1.864l.286.071a.96.96 0 0 1 .434 1.622l-.211.205c-.719.695-.03 1.888.931 1.613l.284-.08a.96.96 0 0 1 1.187 1.187l-.081.283c-.275.96.918 1.65 1.613.931l.205-.211a.96.96 0 0 1 1.622.434l.071.286c.243.97 1.62.97 1.864 0l.071-.286a.96.96 0 0 1 1.622-.434l.205.211c.695.719 1.888.03 1.613-.931l-.08-.284a.96.96 0 0 1 1.187-1.187l.283.081c.96.275 1.65-.918.931-1.613l-.211-.205a.96.96 0 0 1 .434-1.622l.286-.071c.97-.243.97-1.62 0-1.864l-.286-.071a.96.96 0 0 1-.434-1.622l.211-.205c.719-.695.03-1.888-.931-1.613l-.284.08a.96.96 0 0 1-1.187-1.186l.081-.284c.275-.96-.918-1.65-1.613-.931l-.205.211a.96.96 0 0 1-1.622-.434L8.932.727zM8 12.997a4.998 4.998 0 1 0 0-9.995 4.998 4.998 0 0 0 0 9.996z"/>
+                          </svg>
+                    </a></div>
+
+                    
+
                 </div>
                 <div >
-                COL 2 Row 2
-                |
-                |
-                |
-        
+                    <div class=" listFollow">
+                        <div class="listFoll"> <b><%= profile.length %></b>  posts</div>
+                        <div class="listFoll"> <b><%= profile.length %></b>  followers</div>
+                        <div class="listFoll"> <b><%= profile.length %></b>  following</div>
+                    </div>
+                <div>
+
+                    </div>
                 </div>
             </div>
+
          <div class="profileDescription">
-                COL 2 Row 3
-                |
-                |
-                |
-                |
         
          </div>
     </div>
     
-<div class="container">
+<div class="container postNav">
     <nav class="row">
-        <div class="col-4"> |||1||| </div>
-        <div class="col-4" > |||2||| </div>
-        <div class="col-4"> |||3||| </div>
+        <div class="col-4"></div>
+        <div class="col-4" ></div>
+        <div class="col-4">  </div>
     </nav>
 
-  
-        
-        <div class="row">
+        <div class="row postSection">
         <% for(let i = 0; i < profile.length; i++ ){ %>
             <div class="col-4 px-2 py-2">
                 <div>
@@ -58,7 +66,15 @@
             </div>
             </div> 
         <%}%>
-        <div class="col-4 px-2 py-2"><a href="/profile/newPost"> ||||||| + |||||||| </a> </div>
+        <div class="col-4 px-2 py-2 addPost">
+            <a href="/profile/newPost">
+            <div style=" height: 100%; width: 100%;" class="postPlus d-flex align-items-center">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle rounded mx-auto d-block" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+              </svg>
+            </div>
+         </a> </div>
     </div>
 
     

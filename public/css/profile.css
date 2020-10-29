@@ -15,22 +15,34 @@ body {
     grid-template-columns: 30%  auto;
     grid-auto-rows:  auto;
     /* grid-gap: 1em; */
-    height: 12em;
+    height: 16rem;
     grid-template-areas: 
     "img section"
     "img description"
     ;
+    /* border: 1px solid  black; */
+
 
 
 }
 
 .profileImg{
     grid-area: img;
-   
+    /* border: 1px solid  black; */
+    margin-top: 1em;
+
+}
+
+
+
+.profileSection{
+    grid-area: section;
+    /* border: 1px solid  black; */
+
 }
 .userImg{
-    height: 100px;
-    width: 100px;
+    height: 9rem ;
+    width: 9rem;
     border-radius: 50%;
     background-color: azure;
 
@@ -42,22 +54,142 @@ body {
 }
 
 
-.profileSection{
-    grid-area: section;
-}
-
 
 .profileDescription {
     grid-area: description;
 }
 
+.listFollow{
+    display: flex;
+    justify-content: start;
+}
+.listFoll{
+    margin-right: 3rem;
 
+}
 
+.postNav{
 
+    border-top: 1px solid lightgray
+
+}
 
 .postImg{
     height: 100%;
     width : 100%;
 }
+
+
+
+.profinner-container{
+    display: grid;
+    grid-template-columns: 3fr 15% 10% 5fr;
+    grid-auto-rows:  auto;
+    /* grid-gap: 1em; */
+    grid-template-areas: 
+    "name edit setting "
+    ;
+    /* border: 1px solid  black; */
+
+
+}
+.userName{
+    grid-area:name;
+    /* border: 1px solid  black;  */
+
+
+}
+.editBttn{
+    grid-area:edit;
+    /* border: 1px solid  black; */
+    padding: 0px;
+
+}
+.settingBttn{
+    grid-area:setting;
+    /* border: 1px solid  black; */
+
+}
+.act{
+    /* border: 1px solid  black; */
+
+}
+
+.addPost{
+
+    /* border: 1px solid black; */
+    background-color: lightgray;
+
+}
+.addPost:hover{
+    background-color: rgba(167, 167, 167, 0.3);
+
+}
+.postPlus{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+
+
+@media only screen and (max-width:550px){
+    .profile-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows:  auto;
+        /* grid-gap: 1em; */
+        height: 12em;
+        grid-template-areas: 
+        "img section"
+        "description description"
+        ;
+        /* border: 1px solid  black; */
+    
+    }
+    .profileImg{
+        padding: 1rem;
+        margin: 0;
+    }
+    .userImg{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        background-color: azure;
+    
+    }
+
+    .profinner-container{
+        display: grid;
+        grid-template-columns: auto;
+        grid-auto-rows:  auto;
+        /* grid-gap: 1em; */
+        grid-template-areas: 
+        "name setting"
+        "edit edit"
+        ;
+        border: 1px solid  black;
+    
+    
+    }
+    .userName{
+        grid-area:name;
+
+    }
+    .editBttn{
+        grid-area:edit;
+    }
+    .settingBttn{
+        grid-area:setting;
+    }
+
+
+
+}
+
+
+
+
 
 

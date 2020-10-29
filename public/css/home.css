@@ -1,0 +1,80 @@
+
+/* *{
+
+    border: 1px solid black
+
+} */
+.userTag{
+
+    height: 10%;
+    display: block;
+    font-size: 20px;
+    
+}
+
+.tagImg{
+    border-radius: 50%;
+    margin: 3%;
+}
+
+
+.hpostImg{
+    
+    height:90%;
+}
+.apiImg{ 
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.homePosts{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-auto-rows: 10% auto;
+    /* grid-gap: 1em; */
+    grid-template-areas: 
+    /* "story story user" */
+    "posts posts user"
+    "posts posts user"
+    "posts posts user"
+    ;
+}
+
+
+.hpost{
+    width: 85%;
+    height: 90vh ;
+    margin: auto auto;
+    margin-top: 3%;
+    border: 1px solid lightgray;
+
+}
+.LikeShare{
+
+    display:flex;
+
+    justify-content: center;
+
+}
+.allPosts{
+    height: 100%;
+    grid-area:posts;
+
+}
+
+.allUser{
+    width: 37vw;
+    height: 100vh;
+    grid-area: user;    
+
+}
+.stories{
+    grid-area: story;    
+
+
+}
+
+
+

@@ -20,6 +20,14 @@ router.get('/', (req,res)=>{
 
 
 
+////------New Route-----//
+router.get('/home', (req,res)=>{
+
+    res.render('profile/Home.ejs',
+    {currentUser: req.session.currentUser})
+})
+
+
 
 
 ////------New Route-----//

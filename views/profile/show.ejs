@@ -5,17 +5,37 @@
     
 <h1> Post</h1>
 <div class="postContainer">
-<div class="row justify-content-center  h-80 sec" >
-    <div class="col-7"> 
+    <div class=" postShow"> 
+
         <img src="<%= post.img[0]%> " alt="" srcset=""> 
         <div> <form action="/profile/post/<%=post.id%>?_method=DELETE" method="POST">
             <input type="submit" value="DELETE">
         </form> </div> 
+
         <div><button value="Edit"><a href="/profile/post/<%=post.id%>/edit/"> Edit </a></button></div>      
     </div>
-    <div class="col-4">  hey</div>
+
+    <div class="postComment"> 
+         <div>  </div>
+        <div class="commentsSection"> 
+        
+            <% for(let i = 0; i < post.comments.length; i++ ){ %>
+                <div class="col-4">
+                    
+                        <%= post.comments[i] %>
+                </div> 
+            <%}%>
+         </div>
+
+        <form class="commentText">
+            <input type="text" value="Add comment" name="">
+            <input type="button" name="" value="Post" >
+        </form>
+
+    </div>
+
 </div>
-</div>
+
 
 
 
