@@ -18,7 +18,7 @@ https://www.npmjs.com/
 The Login Page looks similar to the login page from instagram but if you sign up it will create a whole new user similr to the app.
 the website is somewhat collapasble thanks to bootstrap, the website is meant to represent instagram when it was first was created.
 We all remember the time when instargram what so simple.
-This clone has all the same funtianlity of uploading a Photo on to your page
+This clone has all the same funtianlity of uploading a Photo on to your page.
 
 
 
