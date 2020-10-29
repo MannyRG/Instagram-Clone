@@ -6,14 +6,14 @@ const bitPost= require('../models/posts.js')
 
 
 
-//////////////////////////////////////////////-------
+//////////////////////////////////////////////--------
 //// -----Index Route -----
 router.get('/', (req,res)=>{
 
     bitPost.find({}, (error,foundProfile)=>{
          res.render(`profile/index.ejs`,{
              profile: foundProfile,
-             currentUser: req.session.currentUser
+             currentUser: req.session.currentUser,
          })
      })
 })

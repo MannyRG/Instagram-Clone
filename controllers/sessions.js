@@ -4,11 +4,11 @@ const express = require('express')
 const sessions = express.Router()
 const bitUser = require('../models/users')
 
-// sessions.get('/new',(req, res)=>{
-//     res.render('sessions/new.ejs', {
-//         currentUser: req.session.currentUser
-//     })
-// })
+sessions.get('/new',(req, res)=>{
+    res.render('sessions/new.ejs', {
+        currentUser: req.session.currentUser
+    })
+})
 
 
 sessions.post('/', (req,res)=>{
@@ -17,7 +17,6 @@ sessions.post('/', (req,res)=>{
 
 
 bitUser.findOne({username: req.body.username}, (err,foundUser)=>{
-    // /this is the problem
     // if(err){
 
     //     console.log(err)
@@ -36,7 +35,7 @@ bitUser.findOne({username: req.body.username}, (err,foundUser)=>{
     //     }
 
     // }
-   res.redirect('/profile')
+   res.redirect(`/profile`)
 })
 
 })

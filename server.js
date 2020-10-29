@@ -65,48 +65,6 @@ app.get('/',(req,res)=>{
     })
 } )
 
-// /////// ------ New---- User Sign up 
-// app.get('/new-accounts/signup',(req,res)=>{
-//     res.render('users/signup.ejs',{
-//     })
-// })
-
-// ////// ---- New Account----
-// app.post('/new-accounts',(req,res)=>{
-//     bitUsers.create(req.body,(error, createUser)=>{
-//         console.log(createUser)
-//         res.redirect('/bitgram/accounts/login')
-//     })
-// })
-
-// /////// ---- New user Login route----
-// app.get('/accounts/login',(req,res)=>{
-//     res.render('users/login.ejs',{
-//     })
-// })
-
-
-// ///-----Login Post-----
-// app.post('/accounts/', (req,res)=>{
-//     const username = req.body.username
-//     const password = req.body.password
-//     bitUsers.findOne({username:req.body.username}, (error,foundUser)=>{
-//         res.redirect(`/profile/`)
-//     })
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

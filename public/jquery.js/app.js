@@ -2,6 +2,11 @@
 
 
 
+console.log('hello')
+
+
+
+
 
 
 $( () => {
@@ -24,7 +29,7 @@ const getUser=()=>{
    fetch(url).then((response) => (response.json())).then((data)=>{
       const randomUser = data.results[0]
       const loginUser = randomUser.login.username
-      let randomImg = 'https://picsum.photos/200/300'
+
       const thumbnailImg = randomUser.picture.thumbnail
 
 

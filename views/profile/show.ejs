@@ -5,14 +5,16 @@
     
 <h1> Post</h1>
 <div class="postContainer">
-    <div class=" postShow"> 
+    <div class=" postShow col align-self-center"> 
 
         <img src="<%= post.img[0]%> " alt="" srcset=""> 
-        <div> <form action="/profile/post/<%=post.id%>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE">
-        </form> </div> 
+        <div class="row justify-content-center">
+            <div class="col-4"> <form action="/profile/post/<%=post.id%>?_method=DELETE" method="POST">
+                <input type="submit" value="DELETE">
+            </form> </div> 
 
-        <div><button value="Edit"><a href="/profile/post/<%=post.id%>/edit/"> Edit </a></button></div>      
+            <div class='col-4'><button value="Edit"><a href="/profile/post/<%=post.id%>/edit/"> Edit </a></button></div>   
+        </div>   
     </div>
 
     <div class="postComment"> 
@@ -26,12 +28,12 @@
                 </div> 
             <%}%>
          </div>
-
-        <form class="commentText">
-            <input type="text" value="Add comment" name="">
+         <div class="commentText">
+        <form >
+            <input type="text" placeholder="Add comment" name="">
             <input type="button" name="" value="Post" >
         </form>
-
+    </div>
     </div>
 
 </div>

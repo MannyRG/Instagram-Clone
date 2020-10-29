@@ -29,7 +29,13 @@ grid-template-areas:
     grid-area: section;
 
 }
-
+.commentText{
+    padding: 1rem;
+    border: 1px solid lightgray;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+}
 
     @media only screen and (max-width:550px){
         .postContainer{
