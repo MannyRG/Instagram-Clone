@@ -36,7 +36,7 @@ bitUser.findOne({username: req.body.username}, (err,foundUser)=>{
     //     }
 
     // }
-   res.redirect(`/profile/`)
+   res.redirect(`/profile`)
 })
 
 })

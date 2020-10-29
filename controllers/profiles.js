@@ -18,7 +18,7 @@ router.get('/', (req,res)=>{
 
             res.render(`profile/index.ejs`,{
                 profile: foundProfile,
-                user: foundUser,
+                user: req.body.user,
                 currentUser: req.session.currentUser,
             })
 
