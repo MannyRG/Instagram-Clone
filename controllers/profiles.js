@@ -77,6 +77,8 @@ router.get('/:id/', (req,res)=>{
 })
 
 
+
+
 ////------Edit Route-----//
 router.get('/post/:id/edit/', (req,res)=>{
    
